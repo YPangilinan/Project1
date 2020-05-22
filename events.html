@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelogged.</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>Travelogged.</h1>
+            <p>Your guide to your cheapest vacation yet!</p>
+        </div>
+        <div class="buttons">
+            <a href="flightinfo.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Flight Info</a>
+            <a href="events.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Events Nearby</a>
+            <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Weather</a>
+        </div>
+        <div class="card d-flex align-items-center p-2 mb-3">
+            <form>
+            <Label><h4>City Name:</h4></Label>
+            <input id="city" type="text" title="cityName" placeholder="San Jose"></br>
+                <Label><h4>Start Date:</h4></Label>
+            <input id="eventstart" type="date">
+            <Label><h4>End Date:</h4></Label>
+            <input id="eventend" type="date">
+                <button type="submit" class="btn btn-primary" id = "submit">Submit</button>
+              </form>
+        </div>
+
+        <table class="table mt-2">
+            <thead>
+              <tr>
+                <th scope="col" id = "name"></th>
+                <th scope="col">Event Name</th>
+                <th scope="col">Event Date</th>
+                <th scope="col">Venue</th>
+                <th scope="col">Find More Info</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    
+ <script type = "text/javascript">
+
+ //onclick for submit button
+    $("#submit").on("click",function(){
+        event.preventDefault();
+        eventAjax();
+
+    
+    $("#city").val("");
+   $("#eventstart").val("");
+    $("#eventend").val("");
+    });
+
+//wrapper for ajax call    
+function eventAjax(){
+    //variables to put into queryURL
+    var apiKey = "7elxdku9GGG5k8j0Xm8KWdANDgecHMV0";
+    var startDate = $("#eventstart").val().trim() + "T12:23:00Z";
+    var endDate = $("#eventend").val().trim() + "T12:23:00Z";
+    var city = $("#city").val().trim();
+
+    console.log(startDate);
+    console.log(endDate);
+    console.log(city);
+    
+    //initiate ajax call
+    $.ajax({
+     type:"GET",
+     url:"https://app.ticketmaster.com/discovery/v2/events?apikey=" + apiKey + "&locale=en-US&startDateTime="+startDate + "&endDateTime="+ endDate + "&city=" + city,
+     async:true,
+    dataType: "json",
+    success: function(json) {
+              console.log(json);
+
+   //adding city name to the table           
+    $("#name").text("Events in " + city);          
+
+    //iterate over event array for event name and date
+    var event = (json._embedded.events);
+      for (var i=0; i<event.length; i++){
+            console.log(event[i].name);
+            console.log(event[i].dates.start.localDate);
+            var tBody = $("tbody");
+            var tRow = $("<tr>");
+            var eventName = $("<td>");
+            var eventDate = $("<td>");
+            eventDate.text(event[i].dates.start.localDate);
+            eventName.text(event[i].name);
+
+            //find more info
+             var link = (event[i].url);
+            console.log(link);
+             var eventLink = $("<td>");
+             eventLink.html("<a href=" + link + ">Ticket Info</a>");
+            eventLink.addClass("link");
+
+            //images column
+            var images = (event[i].images);
+            var eventImage = $("<img>");
+            eventImage.attr("src", images[1].url);
+            eventImage.css("width","200px");
+
+            //venue column
+            var venue = (event[i]._embedded.venues[0].name);
+            console.log(venue);  
+            var eventVenue = $("<td>");
+            eventVenue.text(venue);
+            tRow.append(eventImage,eventName,eventDate,eventVenue,eventLink);
+            tBody.append(tRow);      
+        }
+           },
+  error: function(xhr, status, err) {
+           }
+});
+
+};
+    </script>
+  
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>    
