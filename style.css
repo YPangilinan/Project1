@@ -1,0 +1,26 @@
+body{
+    font-family: 'Oswald', sans-serif;
+    letter-spacing:2px;
+}
+
+.jumbotron{
+    background-color: rgba(255,255,255, 0.2) !important;
+    font-family: 'Oswald', sans-serif;  
+    letter-spacing:2px;
+}
+
+.container{
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
+#submit{
+    background-color: #3B6285;
+}
+
+.card{
+    border-radius:15px;
+    border:0;
+    text-transform: uppercase; 
+    background-color: rgba(255,255,255, 0.2) !important;
+}
+
