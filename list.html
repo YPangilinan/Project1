@@ -26,10 +26,10 @@
           </div>
         <div class="col-lg-9">
         <div class="buttons mb-3">
-            <a href="flightinfo.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Flight Info</a>
-            <a href="events.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Events Nearby</a>
-            <a href="places.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Map the City</a>
-            <a href="list.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">What to Do</a>
+            <a href="flightinfo.html" class="btn btn-light btn-lg active" role="button" aria-pressed="true">Flight Info</a>
+            <a href="events.html" class="btn btn-light btn-lg active" role="button" aria-pressed="true">Events Nearby</a>
+            <a href="places.html" class="btn btn-light btn-lg active" role="button" aria-pressed="true">Map the City</a>
+            <a href="list.html" class="btn btn-light btn-lg active" role="button" aria-pressed="true">What to Do</a>
         </div>
         <div class="card d-flex align-items-center p-2 mb-3">
             <form>
@@ -52,14 +52,25 @@
           </tr>
         </tbody>
       </table>
-</div>
-</div>
+    </div>
+    </div>
 </div>
 </div>
 
 <script>
 
-    var city = "san diego";
+ //onclick for submit button
+     $("#submit").on("click",function(){
+        event.preventDefault();
+        listAjax();
+
+    $("#city").val("");
+    });
+
+
+function listAjax(){
+    var city = $("#city").val().trim();
+    
     var settings = {
 	"async": true,
 	"crossDomain": true,
@@ -77,20 +88,26 @@ $.ajax(settings).done(function (response) {
     var suggest = response.suggestions;
     
     for (var i=0; i<suggest.length; i++){
-        console.log(suggest[i].entities[i].name);
-        console.log(suggest[i].entities[i].type);
+
+        var nestedName = suggest[i].entities;
+            
+        console.log(nestedName[i].name);
+        console.log(nestedName[i].type);
+
         var tBody = $("tbody");
         var tRow = $("<tr>");
-
         var name = $("<td>");
         var type = $("<td>");
-        name.text(suggest[i].entities[i].name);
-        type.text(suggest[i].entities[i].type); 
+
+        name.text(nestedName[i].name);
+        type.text(nestedName[i].type); 
         
         tRow.append(name,type);
         tBody.append(tRow);
-    };
+    };  
+
 });
+};
 </script>
 
 
