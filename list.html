@@ -8,7 +8,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
-    
   </head>
 <body>
     <div class="container">
@@ -24,7 +23,6 @@
              !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
              </script>
             <!--------end weather widget code----->
-            
           </div>
         <div class="col-lg-9">
         <div class="buttons mb-3">
@@ -34,16 +32,72 @@
             <a href="list.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">What to Do</a>
         </div>
         <div class="card d-flex align-items-center p-2 mb-3">
-            <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-            <div class="elfsight-app-4375bfa3-43fc-484b-9a44-8e3f4a471aba"></div>
-        </div>
-        </div>
-    </div>
+            <form>
+            <Label>City Name:</Label>
+            <input id="city" type="text" title="cityName" placeholder="San Jose"></br>
+            <button type="submit" class="btn btn-primary" id = "submit">Submit</button>
+        </form>
+  </div>
+  <div class="card d-flex align-items-center p-2 mb-3">
+    <table class="table mt-2">
+        <thead>
+          <tr>
+            <th scope="col">Attraction Name</th>
+            <th scope="col">Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+</div>
+</div>
 </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script>
 
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD19j6nwAb1sii-OOy2ilgEWfACnhRGVaw&libraries=places"></script>
-  </body>
-  </html>    
+    var city = "san diego";
+    var settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://hotels4.p.rapidapi.com/locations/search?locale=en_US&query=" + city,
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "hotels4.p.rapidapi.com",
+		"x-rapidapi-key": "80210217ddmsh14e31a87a18c557p17d964jsnd687cd2bb387"
+	}
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+
+    var suggest = response.suggestions;
+    
+    for (var i=0; i<suggest.length; i++){
+        console.log(suggest[i].entities[i].name);
+        console.log(suggest[i].entities[i].type);
+        var tBody = $("tbody");
+        var tRow = $("<tr>");
+
+        var name = $("<td>");
+        var type = $("<td>");
+        name.text(suggest[i].entities[i].name);
+        type.text(suggest[i].entities[i].type); 
+        
+        tRow.append(name,type);
+        tBody.append(tRow);
+    };
+});
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      
+
+</body>
+ </html>    
+      
