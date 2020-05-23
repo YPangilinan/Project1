@@ -12,12 +12,21 @@
     <div class="container">
         <div class="jumbotron text-center">
             <h1>Travelogged.</h1>
-            <p>Your guide to your cheapest vacation yet!</p>
+            <p>Your guide for your post-COVID destination!</p>
         </div>
-        <div class="buttons">
+        <div class="row">
+          <div class="col-lg-3">
+          <!----Code for weather widget----->  
+          <a class="weatherwidget-io" href="https://forecast7.com/en/37d34n121d89/san-jose/" data-label_1="SAN JOSE" data-label_2="WEATHER" data-theme="pure" >SAN JOSE WEATHER</a>
+          <script>
+          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+        </script>
+        <!--------end weather widget code----->
+          </div>
+        <div class="col-lg-9">
+        <div class="buttons mb-3">
             <a href="flightinfo.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Flight Info</a>
             <a href="events.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Events Nearby</a>
-            <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Weather</a>
         </div>
         <div class="card d-flex align-items-center p-2 mb-3">
             <form>
@@ -60,6 +69,8 @@
       </div>
 
             </div>
+          </div>
+        </div>
           </div>
        
       
