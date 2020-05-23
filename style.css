@@ -1,10 +1,12 @@
 body{
     font-family: 'Oswald', sans-serif;
+    letter-spacing:2px;
 }
 
 .jumbotron{
     background-color: rgba(255,255,255, 0.2) !important;
     font-family: 'Oswald', sans-serif;  
+    letter-spacing:2px;
 }
 
 .container{

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelogged.</title>
+    <link rel= "stylesheet" type = "text/css" href= "style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    
+  </head>
+<body>
+    <div class="container">
+        <div class="jumbotron text-center mb-0">
+            <h1>Travelogged.</h1>
+            <p>Your guide for your post-COVID destination!</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-3">
+             <!----Code for weather widget----->  
+             <a class="weatherwidget-io" href="https://forecast7.com/en/37d34n121d89/san-jose/?unit=us" data-label_1="SAN JOSE" data-label_2="WEATHER" data-font="Open Sans Condensed" >SAN JOSE WEATHER</a>
+             <script>
+             !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+             </script>
+            <!--------end weather widget code----->
+            
+          </div>
+        <div class="col-lg-9">
+        <div class="buttons mb-3">
+            <a href="flightinfo.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Flight Info</a>
+            <a href="events.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Events Nearby</a>
+            <a href="places.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Map the City</a>
+        </div>
+        <div class="card d-flex align-items-center p-2 mb-3">
+            <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+            <div class="elfsight-app-4375bfa3-43fc-484b-9a44-8e3f4a471aba"></div>
+        </div>
+        </div>
+    </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD19j6nwAb1sii-OOy2ilgEWfACnhRGVaw&libraries=places"></script>
+  </body>
+  </html>    
