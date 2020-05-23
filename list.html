@@ -34,7 +34,7 @@
         <div class="card d-flex align-items-center p-2 mb-3">
             <form>
             <Label>City Name:</Label>
-            <input id="city" type="text" title="cityName" placeholder="San Jose"></br>
+            <input id="city" type="text" title="cityName" placeholder="San Jose">
             <button type="submit" class="btn btn-primary" id = "submit">Submit</button>
         </form>
   </div>
@@ -88,22 +88,23 @@ $.ajax(settings).done(function (response) {
     var suggest = response.suggestions;
     
     for (var i=0; i<suggest.length; i++){
+        for(var j=0; j<suggest[i].entities.length; j++){
 
-        var nestedName = suggest[i].entities;
-            
-        console.log(nestedName[i].name);
-        console.log(nestedName[i].type);
+            console.log(suggest[i].entities[j].name);
+            console.log(suggest[i].entities[j].type);
 
         var tBody = $("tbody");
         var tRow = $("<tr>");
         var name = $("<td>");
         var type = $("<td>");
 
-        name.text(nestedName[i].name);
-        type.text(nestedName[i].type); 
+        name.text(suggest[i].entities[j].name);
+        type.text(suggest[i].entities[j].type); 
         
         tRow.append(name,type);
         tBody.append(tRow);
+        }
+       
     };  
 
 });
