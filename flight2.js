@@ -63,7 +63,8 @@ $.ajax(settings).done(function (response) {
        }
         carrierId.text(quote[i].OutboundLeg.CarrierIds);
         flightPrice.text(quote[i].MinPrice);
-        flightDate.text(quote[i].OutboundLeg.DepartureDate);
+       var newDate = moment(quote[i].OutboundLeg.DepartureDate).format('MMMM Do YYYY');
+        flightDate.text(newDate);
 
         tRow.append(carrierName,carrierId, flightPrice, flightDate);
         tBody.append(tRow);
