@@ -13,7 +13,7 @@
      <nav class="navbar navbar-light">
     <a class="navbar-brand text-light" href="#"> <img src="images/logo.png" height= "75px" alt=""> </a>
     <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Explore" aria-label="Search">
+        <input class="form-control mr-sm-2" type="search" placeholder="E X P L O R E" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><img src="https://img.icons8.com/ios-filled/64/000000/search.png"height = "25px"></button>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
@@ -38,16 +38,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="index.html"><img src="https://img.icons8.com/ios-glyphs/24/000000/paper-plane.png"/> Flights <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="index.html"><img src="https://img.icons8.com/ios-glyphs/24/000000/paper-plane.png"/> Flights Finder <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="events.html"><img src="https://img.icons8.com/ios-filled/50/000000/concert-day.png" height = "25px">Events to Attend</a>
+          <a class="nav-link" href="events.html"><img src="https://img.icons8.com/ios-filled/50/000000/concert-day.png" height = "25px"> Events to Attend</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="places.html"><img src="https://img.icons8.com/ios-glyphs/48/000000/map-marker.png"height = "25px">Map the City</a>
+            <a class="nav-link" href="places.html"><img src="https://img.icons8.com/ios-glyphs/48/000000/map-marker.png"height = "25px"> Map the Destination</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="list.html"><img src="https://img.icons8.com/wired/64/000000/theme-park.png" height = "25px">Notable Attractions</a>
+            <a class="nav-link" href="list.html"><img src="https://img.icons8.com/wired/64/000000/theme-park.png" height = "25px"> Notable Attractions</a>
           </li>
       </ul>
       </form>
@@ -55,22 +55,31 @@
   </nav>
 
 <div class="container">
+    <div class="row p-2" id = "advisoryRow">
+        <div class = "card">
+           <p><img src="https://img.icons8.com/ios-glyphs/64/000000/error.png" height = "55px">
+            <b>TRAVEL ADVISORY!</b><br> Due to the impact of COVID-19, some destinations may have travel restrictions in place. Check any national, local, and health advisories for this destination before you book. Please contact
+        your airline, hotel, and event booking comapnies for refund information.</p> 
+        </div>
+    </div>
+     <!----Code for weather widget----->  
+     <a class="weatherwidget-io" href="https://forecast7.com/en/37d34n121d89/san-jose/?unit=us" data-label_1="SAN JOSE" data-label_2="WEATHER" data-font="Open Sans Condensed" >SAN JOSE WEATHER</a>
+     <script>
+     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+     </script>
+    <!--------end weather widget code----->
   
         <div class="row">
           <div class="col-lg-4">
             <div class="card d-flex align-items-center p-2 mb-3">
+                <img src="https://img.icons8.com/wired/64/000000/theme-park.png" height = "25px"> Notable Attractions
                 <form>
                 <Label>City Name:</Label>
                 <input id="city" type="text" title="cityName" placeholder="San Jose">
                 <button type="submit" class="btn btn-primary" id = "submit">Submit</button>
             </form>
       </div>
-             <!----Code for weather widget----->  
-             <a class="weatherwidget-io" href="https://forecast7.com/en/37d34n121d89/san-jose/?unit=us" data-label_1="SAN JOSE" data-label_2="WEATHER" data-font="Open Sans Condensed" >SAN JOSE WEATHER</a>
-             <script>
-             !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-             </script>
-            <!--------end weather widget code----->
+            
           </div>
         <div class="col-lg-8">
   <div class="card d-flex align-items-center p-2 mb-3" id = "attractionCard">

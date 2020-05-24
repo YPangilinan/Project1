@@ -7,7 +7,8 @@ body{
     letter-spacing: 1px;
 }
 #submit{
-    background-color: #3B6285;
+    background-color: rgba(255,255,255, 0.2) !important;
+    color: black;
 }
 
 #advisoryRow{
@@ -20,23 +21,32 @@ body{
 .card{
     border-radius:15px;
     border:none !important;
-    text-transform: uppercase; 
     background-color: rgba(255,255,255, 0.2) !important;
+}
+
+input{
+    width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
 }
 
 #eventCard{
     max-height: 400px;
     overflow:auto;
+    text-transform: uppercase; 
 }
 
 #flightCard{
     max-height: 400px;
     overflow:auto;
+    text-transform: uppercase; 
 }
 
 #attractionCard{
     max-height: 400px;
     overflow:auto;
+    text-transform: uppercase; 
 }
 
 footer{
