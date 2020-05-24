@@ -4,33 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travelogged.</title>
-    <link rel= "stylesheet" type = "text/css" href= "style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel= "stylesheet" type = "text/css" href= "style.css">
 </head>
 <body>
     <nav class="navbar navbar-light">
         <a class="navbar-brand text-light" href="#"> <img src="images/logo.png" height= "75px" alt=""> </a>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="E X P L O R E" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><img src="https://img.icons8.com/ios-filled/64/000000/search.png"height = "25px"></button>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
        </button>
-<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-  <div class="navbar-nav">
-    <a class="nav-item nav-link" href="https://github.com/YPangilinan" target = "_blank">Yssabel's Github</a>
-    <a class="nav-item nav-link" href="https://ypangilinan.github.io/portfolio.html" target = "_blank">Somin's Github</a>
-    <a class="nav-item nav-link" href="https://ypangilinan.github.io/portfolio.html" target = "_blank">Yssabel's Portfolio</a>
-    <a class="nav-item nav-link" href="https://www.linkedin.com/in/yssabel-pangilinan-4a4519a9/" target = "_blank">Somin's Portfolio</a>
-  </div>
-</div> 
-</nav>
-    <div class="container">
-        <div class="jumbotron text-center mb-0 mt-0">
-            <h1>travelogged.</h1>
-            <p>Your guide for your post-COVID destination!</p>
+       
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" href="https://github.com/YPangilinan" target = "_blank">Yssabel's Github</a>
+        <a class="nav-item nav-link" href="https://github.com/skang91" target = "_blank">Somin's Github</a>
+        <a class="nav-item nav-link" href="https://ypangilinan.github.io/portfolio.html" target = "_blank">Yssabel's Portfolio</a>
+        <a class="nav-item nav-link" href="https://skang91.github.io/Basic-Portfolio/" target = "_blank">Somin's Portfolio</a>
+        
+    </div>
+    </div> 
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">MAIN MENU</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"><img src="https://img.icons8.com/ios-glyphs/24/000000/paper-plane.png"/> Flights <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="events.html"><img src="https://img.icons8.com/ios-filled/50/000000/concert-day.png" height = "25px">Events to Attend</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="events.html"><img src="https://img.icons8.com/ios-glyphs/48/000000/map-marker.png"height = "25px">Map the City</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="list.html"><img src="https://img.icons8.com/wired/64/000000/theme-park.png" height = "25px">Notable Attractions</a>
+              </li>
+          </ul>
+          </form>
         </div>
-        <div class="row">
-          <div class="col-lg-3">
+      </nav>
+    <div class="container">
+       
+        <div class="row mt-2">
+          <div class="col-lg-4">
+            <div class="card d-flex align-items-center p-2 mb-3"> 
+                <form>
+                    <Label>Origin:</Label>
+                <input id="home" type='text' title='home' placeholder="IATA-sky e.g.LAX-sky"><br>
+                <Label>Destination:</Label>
+                <input id="destination" type="text" title="arrival" placeholder="IATA-sky e.g.SFO-sky"><br>
+                    <Label>Departing:</Label>
+                <input id="startdate" type="date"><br>
+                <Label>Returning:</Label>
+                <input id="returndate" type="date"><br>
+                    <button type="submit" class="btn btn-primary" id = "submit">Submit</button>
+                  </form>
+            </div>
           <!----Code for weather widget----->  
           <a class="weatherwidget-io" href="https://forecast7.com/en/37d34n121d89/san-jose/?unit=us" data-label_1="SAN JOSE" data-label_2="WEATHER" data-font="Open Sans Condensed" >SAN JOSE WEATHER</a>
           <script>
@@ -38,30 +77,16 @@
           </script>
         <!--------end weather widget code----->
           </div>
-        <div class="col-lg-9">
-        <div class="buttons mb-3">
-            <a href="flightinfo.html" class="btn btn-light btn-lg active" role="button" aria-pressed="true">Flight Info</a>
-            <a href="events.html" class="btn btn-light btn-lg active" role="button" aria-pressed="true">Events Nearby</a>
-            <a href="places.html" class="btn btn-light btn-lg active" role="button" aria-pressed="true">Map the City</a>
-            <a href="list.html" class="btn btn-light btn-lg active" role="button" aria-pressed="true">What to Do</a>
-        </div>
-        <div class="card d-flex align-items-center p-2 mb-3">
-            <form>
-                <Label>Origin:</Label>
-            <input id="home" type='text' title='home' placeholder="IATA-sky e.g.LAX-sky">
-            <Label>Destination:</Label>
-            <input id="destination" type="text" title="arrival" placeholder="IATA-sky e.g.SFO-sky"></br>
-                <Label>Start Date:</Label>
-            <input id="startdate" type="date">
-            <Label>End Date:</Label>
-            <input id="returndate" type="date">
-                <button type="submit" class="btn btn-primary" id = "submit">Submit</button>
-              </form>
-        </div>
-          <div class="card">
+        <div class="col-lg-8">
+            <div class="row mt-2">
+                <div class="card">
+                    <div id = "origin">Origin: </div>
+                <br>
+                    <div id ="destinationDiv">Destination:</div>
+                </div>
+            </div>
+          <div class="card" id = "flightCard">
             <div class="card-body">
-                <div id = "origin">Origin: </div>
-        <div id ="destinationDiv">Destination:</div>
 
         <table class="table mt-2">
           <thead>
@@ -83,7 +108,51 @@
      </div>
   </div>
   </div>
+  <div class="row mt-3 mb-3">
+    <div class="col-md-1">
+       <img src = "https://a.travel-assets.com/flex/flexmanager/images/2019/06/27/TVLY_RTB_Homepage_NeverRoamAlone_img_40x40_20190626.png">
+    </div>
+      <div class="col-md-3">
+        <b>You'll never have roam the world alone.</b>
+        <br> Travelogged will provide you dependable service 24/7.
+      </div>
+      <div class="col-md-1">
+        <img src = "https://a.travel-assets.com/flex/flexmanager/images/2019/06/27/TVLY_RTB_Homepage_WorldOfChoice_img_40x40_20190626.png">
+      </div>
+      <div class="col-md-3">
+          <b>A world of options all in one place.</b>
+        <br> <p>Travelogged provides over 2 API's for information about your next destination.</p>
+        </div>
+        <div class="col-md-1">
+            <img src = "https://a.travel-assets.com/flex/flexmanager/images/2019/06/27/TVLY_RTB_Homepage_PriceMatchGuarantee_App_img_40x40_20190626.png">
+        </div>
+    <div class="col-md-3">
+         <b> Peace of mind, wherever you may roam.</b>
+         <br> Backed by Skyscanner, Ticketmaster & Google Maps (APIs). We guarantee to provide you the most up to date information the API can provide.</p>
+
+    </div>
+  </div>
+  <footer>
+    <div class="row">
+        <div class="col-md-4">
+            CREDITS: <br>
+            <a href="https://icons8.com/icon/Iwq0eDJRjhnA/theme-park">Theme Park icon by Icons8</a>
+            <a href="https://icons8.com/icon/59829/map-marker">Map Marker icon by Icons8</a><br>
+            <a href="https://icons8.com/icon/CO3hv-ABAlp3/concert-day">Concert Day icon by Icons8</a>
+            <a href="https://icons8.com/icon/59854/paper-plane">Paper Plane icon by Icons8</a><br>
+            <a href="https://icons8.com/icon/7695/search">Search icon by Icons8</a><br>        
+        </div>
+        <div class="col-md-4">
+            Made by Yssabel Pangilinan & Somin Kang <br>
+            UCLA 2020
+        </div>
+
+    </div>
+   
+ </footer>
  </div>
+
+
  
  
  <script src = "https://cdn.jsdelivr.net/npm/moment@2.25.3/moment.min.js"></script>

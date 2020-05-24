@@ -20,8 +20,27 @@ body{
 
 .card{
     border-radius:15px;
-    border:0;
+    border:none !important;
     text-transform: uppercase; 
     background-color: rgba(255,255,255, 0.2) !important;
+}
+
+#eventCard{
+    max-height: 400px;
+    overflow:auto;
+}
+
+#flightCard{
+    max-height: 400px;
+    overflow:auto;
+}
+
+#attractionCard{
+    max-height: 400px;
+    overflow:auto;
+}
+
+footer{
+    font-size: 10px;
 }
 
