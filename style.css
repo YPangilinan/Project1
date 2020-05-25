@@ -66,6 +66,17 @@ footer{
 
 h1{
     font-family: 'Bebas Neue', cursive;
+    text-align: center;
+}
+
+h1::before,
+h1::after {
+    display: inline-block;
+    content: "";
+    border-top: .3rem solid black;
+    width: 4rem;
+    margin: 0 1rem;
+    transform: translateY(-1rem);
 }
 
 h3{
