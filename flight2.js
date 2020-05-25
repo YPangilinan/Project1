@@ -1,5 +1,4 @@
 //flight info API
-
   $("#submit").on("click", function(){
 
     event.preventDefault();
@@ -9,9 +8,7 @@
     $("#destination").val("");
    $("#startdate").val("");
     $("#returndate").val("");
-
 });
-
 function ajax(){
 
     var origin = $("#home").val().trim();
@@ -34,7 +31,6 @@ var settings = {
 		"x-rapidapi-key": "80210217ddmsh14e31a87a18c557p17d964jsnd687cd2bb387"
 	}
 };
-
 $.ajax(settings).done(function (response) {
     console.log(response);
 
@@ -69,10 +65,7 @@ $.ajax(settings).done(function (response) {
         tRow.append(carrierName,carrierId, flightPrice, flightDate);
         tBody.append(tRow);
     }
-
-
   });
-
 };
 
 

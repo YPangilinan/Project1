@@ -14,14 +14,12 @@
 <body>
     <div class = "bg-light mb-0">
     <p><img src="https://img.icons8.com/ios-glyphs/64/000000/error.png" height = "45px">
-        <b>TRAVEL ADVISORY!</b> Due to the impact of COVID-19, destinations may have travel restrictions in place. Check any national, local, and health advisories before you book.</p> </div>
-  
+      <b>TRAVEL ADVISORY!</b> Due to the impact of COVID-19, destinations may have travel restrictions in place. Check any national, local, and health advisories before you book.</p> </div>
         <div class="jarallax" data-jarallax-video="https://youtu.be/Fv9tt5uYUO0">
             <nav class="navbar navbar-light mt-0">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                     </button>
-                     
+                </button>  
                   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                   <div class="navbar-nav">
                       <a class="nav-item nav-link" href="https://github.com/YPangilinan" target = "_blank">Yssabel's Github</a>
@@ -41,10 +39,9 @@
         </div>
         <nav class="navbar sticky-top navbar-light justify-content-center">
           <a class="navbar-brand" href="index.html">START YOUR TRAVELOGGING ADVENTURE</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
@@ -55,10 +52,10 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" href="places.html"><img src="https://img.icons8.com/ios-glyphs/48/000000/map-marker.png"height = "25px"> Map the Destination</a>
-          </li>
-          <li class="nav-item">
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="list.html"><img src="https://img.icons8.com/wired/64/000000/theme-park.png" height = "25px"> Notable Attractions</a>
-          </li>
+        </li>
       </ul>
       </form>
     </div>
@@ -81,38 +78,34 @@
                   <button type="submit" class="btn btn-primary" id = "submit">Submit</button>
                 </form>
           </div>
-
-  <!----Code for weather widget----->  
-  <a class="weatherwidget-io" href="https://forecast7.com/en/37d34n121d89/san-jose/?unit=us" data-label_1="SAN JOSE" data-label_2="WEATHER" data-theme="pure" data-basecolor="rgba(255, 255, 255, 0.3)" data-highcolor="#d03e22" >SAN JOSE WEATHER</a>
-  <script>
-  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-  </script>
- <!--------end weather widget code----->
-             
-          </div>
-       
+    <!----Code for weather widget----->  
+      <a class="weatherwidget-io" href="https://forecast7.com/en/37d34n121d89/san-jose/?unit=us" data-label_1="SAN JOSE" data-label_2="WEATHER" data-theme="pure" data-basecolor="rgba(255, 255, 255, 0.3)" data-highcolor="#d03e22" >SAN JOSE WEATHER</a>
+      <script>
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+      </script>
+    <!--------end weather widget code-----> 
+       </div>
         <div class="col-lg-8">
-        <div class="card d-flex align-items-center p-2 mb-3" id= "eventCard">
-        <table class="table mt-2">
-            <thead>
-              <tr>
+           <div class="card d-flex align-items-center p-2 mb-3" id= "eventCard">
+            <table class="table mt-2">
+              <thead>
+               <tr>
                 <th scope="col" id = "name"></th>
                 <th scope="col">Event Name</th>
                 <th scope="col">Event Date</th>
                 <th scope="col">Venue</th>
                 <th scope="col">Find More Info</th>
               </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td></td>
-              </tr>
+              </thead>
+               <tbody>
+                 <tr>
+                  <td></td>
+                </tr>
             </tbody>
           </table>
     </div>
   </div>
 </div>
-
  <!----------- Footer ------------>
  <footer class="footer-bs">
   <div class="row">
@@ -168,7 +161,7 @@
 </footer>
 
 
-    
+<!----JAVASCRIPT---->    
  <script type = "text/javascript">
 
  //onclick for submit button
@@ -176,12 +169,10 @@
         event.preventDefault();
         eventAjax();
 
-    
     $("#city").val("");
-   $("#eventstart").val("");
+    $("#eventstart").val("");
     $("#eventend").val("");
     });
-
 //wrapper for ajax call    
 function eventAjax(){
     //variables to put into queryURL
@@ -242,10 +233,9 @@ function eventAjax(){
            },
   error: function(xhr, status, err) {
            }
-});
-
+  }); 
 };
-    </script>
+</script>
   
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

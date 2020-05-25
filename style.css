@@ -10,65 +10,47 @@ body{
     background-color: rgba(255,255,255, 0.2) !important;
     color: black;
 }
-
-#advisoryRow{
-    background-color:#FBB88C;
-    opacity: 0.8;
-    border-radius: 25px;
-    padding:5px;
-
-}
 .card{
     border-radius:15px;
     border:none !important;
     background-color: rgba(255,255,255, 0.2) !important;
 }
-
 input{
     width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
 }
-
 #eventCard{
     max-height: 400px;
     overflow:auto;
     text-transform: uppercase; 
 }
-
 #flightCard{
     max-height: 400px;
     overflow:auto;
     text-transform: uppercase; 
 }
-
 #attractionCard{
     max-height: 400px;
     overflow:auto;
     text-transform: uppercase; 
 }
-
 footer{
     font-size: 12px;
     margin-left:50px;
     margin-right:50px;
 }
-
-
 .jarallax{
     height:500px;
 }
-
 .logo{
     text-align: center;
 }
-
 h1{
     font-family: 'Bebas Neue', cursive;
     text-align: center;
 }
-
 h1::before,
 h1::after {
     display: inline-block;
@@ -78,28 +60,23 @@ h1::after {
     margin: 0 1rem;
     transform: translateY(-1rem);
 }
-
 h3{
     font-family: 'Bebas Neue', cursive; 
 }
 h5{
     font-family: 'Bebas Neue', cursive; 
 }
-
 #guaranteeImg{
     width:100%;
     height:auto;
 }
-
 button{
     border:none !important;
 }
-
 #trustLogo{
     width:100%;
     height:auto;
 }
-
 .parallax{
     padding:20px;
     background: url("images/guarantee2.png") no-repeat center;
@@ -107,7 +84,6 @@ button{
     background-attachment: fixed;
     height:400px;
 }
-
 .parallax2{
     padding:20px;
     background: url("images/lastImage.png") no-repeat center;
@@ -115,7 +91,6 @@ button{
     background-attachment: fixed;
     height:400px;
 }
-
 .footer-bs {
     background-color: #3c3d41;
     padding: 60px 40px;
