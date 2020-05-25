@@ -6,29 +6,39 @@
     <title>Travelogged.</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/jarallax@1/dist/jarallax.min.js"></script>
+    <script src="https://unpkg.com/jarallax@1/dist/jarallax-video.min.js"></script>
     <link rel= "stylesheet" type = "text/css" href= "style.css">
-  </head>
-<body> 
-     <nav class="navbar navbar-light">
-    <a class="navbar-brand text-light" href="#"> <img src="images/logo.png" height= "75px" alt=""> </a>
-    <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="E X P L O R E" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><img src="https://img.icons8.com/ios-filled/64/000000/search.png"height = "25px"></button>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-   </button>
-   
-<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-<div class="navbar-nav">
-    <a class="nav-item nav-link" href="https://github.com/YPangilinan" target = "_blank">Yssabel's Github</a>
-    <a class="nav-item nav-link" href="https://github.com/skang91" target = "_blank">Somin's Github</a>
-    <a class="nav-item nav-link" href="https://ypangilinan.github.io/portfolio.html" target = "_blank">Yssabel's Portfolio</a>
-    <a class="nav-item nav-link" href="https://skang91.github.io/Basic-Portfolio/" target = "_blank">Somin's Portfolio</a>
-    
-</div>
-</div> 
-</nav>
+</head>
+<body>
+    <div class = "bg-light mb-0">
+    <p><img src="https://img.icons8.com/ios-glyphs/64/000000/error.png" height = "45px">
+        <b>TRAVEL ADVISORY!</b> Due to the impact of COVID-19, destinations may have travel restrictions in place. Check any national, local, and health advisories before you book.</p> </div>
+  
+        <div class="jarallax" data-jarallax-video="https://youtu.be/U3_uxUSeZV4">
+            <nav class="navbar navbar-light mt-0">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                     </button>
+                     
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div class="navbar-nav">
+                      <a class="nav-item nav-link" href="https://github.com/YPangilinan" target = "_blank">Yssabel's Github</a>
+                      <a class="nav-item nav-link" href="https://github.com/skang91" target = "_blank">Somin's Github</a>
+                      <a class="nav-item nav-link" href="https://ypangilinan.github.io/portfolio.html" target = "_blank">Yssabel's Portfolio</a>
+                      <a class="nav-item nav-link" href="https://skang91.github.io/Basic-Portfolio/" target = "_blank">Somin's Portfolio</a>   
+                  </div>
+                  </div> 
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="E X P L O R E" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><img src="https://img.icons8.com/ios-filled/64/000000/search.png"height = "25px"></button>
+            </nav>
+            <div class="logo">
+                <img src = "images/travelogged6.png">
+                <br>
+            </div>
+        </div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="index.html">MAIN MENU</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,20 +65,9 @@
   </nav>
 
 <div class="container">
-    <div class="row p-2" id = "advisoryRow">
-        <div class = "card">
-           <p><img src="https://img.icons8.com/ios-glyphs/64/000000/error.png" height = "55px">
-            <b>TRAVEL ADVISORY!</b><br> Due to the impact of COVID-19, some destinations may have travel restrictions in place. Check any national, local, and health advisories for this destination before you book. Please contact
-        your airline, hotel, and event booking comapnies for refund information.</p> 
-        </div>
+    <div class="row">
+        <h1>Find some sights to see.</h1>
     </div>
-     <!----Code for weather widget----->  
-     <a class="weatherwidget-io" href="https://forecast7.com/en/37d34n121d89/san-jose/?unit=us" data-label_1="SAN JOSE" data-label_2="WEATHER" data-font="Open Sans Condensed" >SAN JOSE WEATHER</a>
-     <script>
-     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-     </script>
-    <!--------end weather widget code----->
-  
         <div class="row">
           <div class="col-lg-4">
             <div class="card d-flex align-items-center p-2 mb-3">
@@ -79,7 +78,13 @@
                 <button type="submit" class="btn btn-primary" id = "submit">Submit</button>
             </form>
       </div>
-            
+                 <!----Code for weather widget----->  
+     <a class="weatherwidget-io" href="https://forecast7.com/en/37d34n121d89/san-jose/?unit=us" data-label_1="SAN JOSE" data-label_2="WEATHER" data-font="Open Sans Condensed" >SAN JOSE WEATHER</a>
+     <script>
+     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+     </script>
+    <!--------end weather widget code----->
+  
           </div>
         <div class="col-lg-8">
   <div class="card d-flex align-items-center p-2 mb-3" id = "attractionCard">
@@ -99,30 +104,7 @@
     </div>
     </div>
 </div>
-<div class="row mt-3 mb-3">
-    <div class="col-md-1">
-       <img src = "https://a.travel-assets.com/flex/flexmanager/images/2019/06/27/TVLY_RTB_Homepage_NeverRoamAlone_img_40x40_20190626.png">
-    </div>
-      <div class="col-md-3">
-        <b>You'll never have roam the world alone.</b>
-        <br> Travelogged will provide you dependable service 24/7.
-      </div>
-      <div class="col-md-1">
-        <img src = "https://a.travel-assets.com/flex/flexmanager/images/2019/06/27/TVLY_RTB_Homepage_WorldOfChoice_img_40x40_20190626.png">
-      </div>
-      <div class="col-md-3">
-          <b>A world of options all in one place.</b>
-        <br> <p>Travelogged provides over 2 API's for information about your next destination.</p>
-        </div>
-        <div class="col-md-1">
-            <img src = "https://a.travel-assets.com/flex/flexmanager/images/2019/06/27/TVLY_RTB_Homepage_PriceMatchGuarantee_App_img_40x40_20190626.png">
-        </div>
-    <div class="col-md-3">
-         <b> Peace of mind, wherever you may roam.</b>
-         <br> Backed by Skyscanner, Ticketmaster & Google Maps (APIs). We guarantee to provide you the most up to date information the API can provide.</p>
 
-    </div>
-  </div>
 <footer>
     <div class="row">
         <div class="col-md-4">
