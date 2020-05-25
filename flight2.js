@@ -38,8 +38,8 @@ var settings = {
 $.ajax(settings).done(function (response) {
     console.log(response);
 
-    $("#origin").text("Origin: " + response.Places[0].Name);
-    $("#destinationDiv").text("Destination:" + response.Places[1].Name);
+    $("#origin").html("<h3>" + "Origin: " + "</h3>" + response.Places[0].Name);
+    $("#destinationDiv").html("<h3>" + "Destination: " + "</h3>" + response.Places[1].Name);
 
     var carrier = response.Carriers;
     var quote = response.Quotes;
