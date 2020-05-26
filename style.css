@@ -12,30 +12,37 @@ body{
 }
 .card{
     border-radius:15px;
-    border:none !important;
+    padding:10px;
     background-color: rgba(255,255,255, 0.2) !important;
+    margin-bottom:10px;
 }
 input{
-    width: 100%;
+width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
 }
 #eventCard{
-    max-height: 400px;
-    overflow:auto;
-    text-transform: uppercase; 
+    border:none !important;
+    width: 100%;
+    max-height: 550px;
+    overflow:auto; 
 }
 #flightCard{
+    border:none !important;
     max-height: 400px;
     overflow:auto;
-    text-transform: uppercase; 
+
+}
+#originCard{
+    border:none !important;
 }
 #attractionCard{
+    border:none !important;
     width:100%;
     max-height: 400px;
     overflow:auto;
-    text-transform: uppercase; 
+
 }
 footer{
     font-size: 12px;
