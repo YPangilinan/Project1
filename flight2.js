@@ -45,25 +45,28 @@ $.ajax(settings).done(function (response) {
     for (var i=0; i<quote.length; i++){
         console.log(quote[i].MinPrice);
         console.log(quote[i].OutboundLeg.DepartureDate);
-        var tBody = $("tbody");
-        var tRow = $("<tr>");
-        var flightPrice = $("<td>");
-        var flightDate = $("<td>");
-        var carrierId = $("<td>");
-        var carrierName = $("<td>");
+        var newDiv = $("<div>");
+        newDiv.addClass("card");
+        var priceDiv = $("<div>");
+        priceDiv.addClass("card");
+        var flightPrice = $("<p>");
+        var flightDate = $("<p>");
+        var carrierId = $("<p>");
+        var carrierName = $("<p>");
        for(c of carrier){
          if (c.CarrierId == quote[i].OutboundLeg.CarrierIds[0]){
-           carrierName.text(c.Name);
+           carrierName.html("<h5>" + c.Name + "</h5>");
            console.log(carrierName);
          }
        }
-        carrierId.text(quote[i].OutboundLeg.CarrierIds);
-        flightPrice.text("$" + quote[i].MinPrice);
-       var newDate = moment(quote[i].OutboundLeg.DepartureDate).format('MMMM Do YYYY');
-        flightDate.text(newDate);
-
-        tRow.append(carrierName,carrierId, flightPrice, flightDate);
-        tBody.append(tRow);
+        carrierId.text("Carrier ID: " + quote[i].OutboundLeg.CarrierIds);
+        flightPrice.html("<h5>$" + quote[i].MinPrice + "</h5>");
+       var newDate = moment(quote[i].OutboundLeg.DepartureDate).format('MMMM DD YYYY');
+        flightDate.text("Departure: " + newDate);
+        newDiv.append(carrierName, carrierId);
+        priceDiv.append(flightPrice, flightDate);
+       $(".flights").append(newDiv);
+       $(".prices").append(priceDiv);
     }
   });
 };

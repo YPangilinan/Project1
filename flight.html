@@ -64,7 +64,7 @@
             <h1>Find the flight that works for you.</h1>
         </div>
         <div class="row mt-2">
-          <div class="col-lg-4">
+          <div class="col-lg-3">
             <div class="card d-flex align-items-center p-2 mb-3"> 
                 <img src="https://img.icons8.com/ios-glyphs/24/000000/paper-plane.png"/> Flights Finder
                     <form>
@@ -87,7 +87,7 @@
             </script>
             <!--------end weather widget code----->
           </div>
-        <div class="col-lg-8">
+        <div class="col-lg-9">
             <div class="row mt-2">
                 <div class="card" id = "originCard">
                     <div id = "origin"><h3>Origin:</h3> </div>
@@ -95,17 +95,19 @@
                     <div id ="destinationDiv"><h3>Destination:</h3></div>
                 </div>
             </div>
-          <div class="card" id = "flightCard">
-            <div class="card-body">
-                <table class="table table-hover mt-2">
-                    <tbody>
-                    </tbody>
-                </table>
+            <div id = "flightsPrices">
+                 <div class="row">
+            <div class="col-md-7">
+                <div class="flights"></div>
             </div>
-         </div>
-    </div>
+            <div class="col-sm-5">
+                <div class="prices"></div>
+            </div>
+        </div>
+            </div>
   </div>
  </div>
+</div>
   <!----------- Footer ------------>
   <footer class="footer-bs">
     <div class="row">
