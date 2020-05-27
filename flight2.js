@@ -45,10 +45,8 @@ $.ajax(settings).done(function (response) {
     for (var i=0; i<quote.length; i++){
         console.log(quote[i].MinPrice);
         console.log(quote[i].OutboundLeg.DepartureDate);
-        var newDiv = $("<div>");
-        newDiv.addClass("card");
-        var priceDiv = $("<div>");
-        priceDiv.addClass("card");
+        var newDiv = $("<p>");
+        var priceDiv = $("<p>");
         var flightPrice = $("<p>");
         var flightDate = $("<p>");
         var carrierId = $("<p>");
@@ -65,8 +63,18 @@ $.ajax(settings).done(function (response) {
         flightDate.text("Departure: " + newDate);
         newDiv.append(carrierName, carrierId);
         priceDiv.append(flightPrice, flightDate);
-       $(".flights").append(newDiv);
-       $(".prices").append(priceDiv);
+        var fullCard = $("<div>").addClass("row");
+        var wrapper = $("<div>").addClass("card w-100");
+        var newRow = $("<div>").addClass("row");
+        newDiv.addClass("col-lg-7");
+        priceDiv.addClass("col-lg-5");
+        newRow.append(newDiv);
+        newRow.append(priceDiv);
+        wrapper.append(newRow);
+        fullCard.append(wrapper);
+        $(".flights").append(fullCard);
+      //  $(".flights").append(newDiv);
+      //  $(".prices").append(priceDiv);
     }
   });
 };
