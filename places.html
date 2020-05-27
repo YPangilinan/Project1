@@ -4,56 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travelogged.</title>
-    <link rel= "stylesheet" type = "text/css" href= "style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
-    
-  </head>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/jarallax@1/dist/jarallax.min.js"></script>
+    <script src="https://unpkg.com/jarallax@1/dist/jarallax-video.min.js"></script>
+    <link rel= "stylesheet" type = "text/css" href= "style.css">
+</head>
 <body>
-    <nav class="navbar navbar-light">
-        <a class="navbar-brand text-light" href="#"> <img src="images/logo.png" height= "75px" alt=""> </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-       </button>
-<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-  <div class="navbar-nav">
-    <a class="nav-item nav-link" href="https://github.com/YPangilinan" target = "_blank">Yssabel's Github</a>
-    <a class="nav-item nav-link" href="https://ypangilinan.github.io/portfolio.html" target = "_blank">Somin's Github</a>
-    <a class="nav-item nav-link" href="https://ypangilinan.github.io/portfolio.html" target = "_blank">Yssabel's Portfolio</a>
-    <a class="nav-item nav-link" href="https://www.linkedin.com/in/yssabel-pangilinan-4a4519a9/" target = "_blank">Somin's Portfolio</a>
-  </div>
-</div> 
-</nav>
-    <div class="container">
-        <div class="jumbotron text-center mb-0 mt-0">
-            <h1>travelogged.</h1>
-            <p>Your guide for your post-COVID destination!</p>
+    <div class = "bg-light mb-0">
+    <p><img src="https://img.icons8.com/ios-glyphs/64/000000/error.png" height = "45px">
+        <b>TRAVEL ADVISORY!</b> Due to the impact of COVID-19, destinations may have travel restrictions in place. Check any national, local, and health advisories before you book.</p> </div>
+        <div class="jarallax" data-jarallax-video="https://youtu.be/M_Ft0sW-CGM">
+            <nav class="navbar navbar-light mt-0">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button> 
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div class="navbar-nav">
+                      <a class="nav-item nav-link" href="https://github.com/YPangilinan" target = "_blank">Yssabel's Github</a>
+                      <a class="nav-item nav-link" href="https://github.com/skang91" target = "_blank">Somin's Github</a>
+                      <a class="nav-item nav-link" href="https://ypangilinan.github.io/portfolio.html" target = "_blank">Yssabel's Portfolio</a>
+                      <a class="nav-item nav-link" href="https://skang91.github.io/Basic-Portfolio/" target = "_blank">Somin's Portfolio</a>   
+                  </div>
+                  </div> 
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="E X P L O R E" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><img src="https://img.icons8.com/ios-filled/64/000000/search.png"height = "25px"></button>
+            </nav>
+            <div class="logo">
+                <img src = "images/travelogged10.png">
+            </div>
         </div>
-        <div class="row">
-          <div class="col-lg-3">
-             <!----Code for weather widget----->  
-             <a class="weatherwidget-io" href="https://forecast7.com/en/37d34n121d89/san-jose/?unit=us" data-label_1="SAN JOSE" data-label_2="WEATHER" data-font="Open Sans Condensed" >SAN JOSE WEATHER</a>
-             <script>
-             !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-             </script>
+        <nav class="navbar sticky-top navbar-light justify-content-center bg-white">
+            <a class="navbar-brand" href="index.html">START YOUR TRAVELOGGING ADVENTURE</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="flight.html"><img src="https://img.icons8.com/ios-glyphs/24/000000/paper-plane.png"/> Flights Finder <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="events.html"><img src="https://img.icons8.com/ios-filled/50/000000/concert-day.png" height = "25px"> Events to Attend</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="places.html"><img src="https://img.icons8.com/ios-glyphs/48/000000/map-marker.png"height = "25px"> Map the Destination</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="list.html"><img src="https://img.icons8.com/wired/64/000000/theme-park.png" height = "25px"> Notable Attractions</a>
+            </li>
+          </ul>
+          </form>
+        </div>
+      </nav>
+    <div class="container">
+        <div class="row mt-3">
+          <div class="col-lg-3"> 
+            <div class="card d-flex align-items-center p-2 mb-3">
+            <img src="https://img.icons8.com/ios-glyphs/48/000000/map-marker.png"height = "25px"> Map the Destination
+            </div>
+              <!----Code for weather widget----->  
+              <a class="weatherwidget-io" href="https://forecast7.com/en/37d34n121d89/san-jose/?unit=us" data-label_1="SAN JOSE" data-label_2="WEATHER" data-theme="pure" data-basecolor="rgba(255, 255, 255, 0.3)" data-highcolor="#d03e22" >SAN JOSE WEATHER</a>
+              <script>
+              !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+              </script>
             <!--------end weather widget code----->
-            
           </div>
         <div class="col-lg-9">
-        <div class="buttons mb-3">
-            <a href="index.html" class="btn btn-light btn-lg active" role="button" aria-pressed="true">Flight Info</a>
-            <a href="events.html" class="btn btn-light btn-lg active" role="button" aria-pressed="true">Events Nearby</a>
-            <a href="places.html" class="btn btn-light btn-lg active" role="button" aria-pressed="true">Map the City</a>
-            <a href="list.html" class="btn btn-light btn-lg active" role="button" aria-pressed="true">What to Do</a>
-        </div>
-        <div class="card d-flex align-items-center p-2 mb-3">
+            <div class="card d-flex align-items-center p-2 mb-3">
             <script src="https://apps.elfsight.com/p/platform.js" defer></script>
             <div class="elfsight-app-4375bfa3-43fc-484b-9a44-8e3f4a471aba"></div>
-        </div>
+            </div>
         </div>
     </div>
 </div>
+ <!----------- Footer ------------>
+ <footer class="footer-bs">
+    <div class="row">
+        <div class="col-md-3 footer-brand animated fadeInLeft">
+            <img src = "images/traveloggedWhite.png" width = "250px">
+            <p>Created by Yssabel Pangilinan and Somin Kang. We are working to simplify your travel plans. Planning can be stressful, but with Travelogged, it will be made easy.</p>
+            <p>© 2020, Travelogged. All rights reserved</p>
+        </div>
+        <div class="col-md-4 footer-nav animated fadeInUp">
+            <h4>HELPFUL TRAVEL LINKS —</h4>
+            <div class="col-md-6">
+                <ul class="pages">
+                    <li><a href="https://www.airbnb.com/" target = "_blank">Airbnb</a></li>
+                    <li><a href="https://www.travelocity.com/" target = "_blank">Travelocity</a></li>
+                    <li><a href="https://www.expedia.com/?pwaLob=wizard-hotel-pwa-v2" target = "_blank">Expedia</a></li>
+                    <li><a href="https://www.tripadvisor.com/" target = "_blank">TripAdvisor</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h4>FOOD & EVENT LINKS —</h4>
+                <ul class="list">
+                    <li><a href="https://www.yelp.com/" target = "_blank">Yelp</a></li>
+                    <li><a href="https://www.ticketmaster.com/" target = "_blank">Ticketmaster</a></li>
+                    <li><a href="https://www.livenation.com/" target = "_blank">LiveNation</a></li>
+                    <li><a href="https://www.youtube.com/user/migrationology" target = "_blank">Migrationology</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-2 footer-social animated fadeInDown">
+            <h4>ICON & FOOTER CREDITS</h4>
+            <ul>
+                <li><a href="https://icons8.com/icon/Iwq0eDJRjhnA/theme-park">Theme Park icon by Icons8</a></li>
+                <li><a href="https://icons8.com/icon/59829/map-marker">Map Marker icon by Icons8</a></li>
+                <li><a href="https://icons8.com/icon/CO3hv-ABAlp3/concert-day">Concert Day icon by Icons8</a></li>
+                <li><a href="https://icons8.com/icon/59854/paper-plane">Paper Plane icon by Icons8</a></li>
+                <li><a href="https://icons8.com/icon/7695/search">Search icon by Icons8</a></li>
+                <li><a href="http://enfoplus.net">Footer Designed by Prince J. Sargbah</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3 footer-ns animated fadeInRight">
+            <h4>Newsletter</h4>
+            <p>We currently don't have one, but check the links above to follow us on our coding journeys!</p>
+            <p>
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search for...">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-envelope"></span></button>
+                  </span>
+                </div><!-- /input-group -->
+             </p>
+        </div>
+    </div>
+</footer>
 
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

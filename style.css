@@ -1,27 +1,162 @@
 body{
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Abel', sans-serif;
     letter-spacing:2px;
 }
-
-.jumbotron{
-    background-color: rgba(255,255,255, 0.2) !important;
-    font-family: 'Oswald', sans-serif;  
-    letter-spacing:2px;
-    height:200px;
-}
-
 .container{
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Abel', sans-serif;
     letter-spacing: 1px;
 }
 #submit{
-    background-color: #3B6285;
+    align-items: center;
+    color: black;
 }
-
 .card{
     border-radius:15px;
-    border:0;
-    text-transform: uppercase; 
+    padding:10px;
     background-color: rgba(255,255,255, 0.2) !important;
+    margin-bottom:10px;
+}
+input{
+width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+#eventCard{
+    border:none !important;
+    width: 100%;
+    max-height: 800px;
+    overflow:auto; 
+}
+#flightCard{
+    border:none !important;
+    max-height: 400px;
+    overflow:auto;
+
+}
+#originCard{
+    border:none !important;
+}
+#inspo{
+    border:none !important;
+}
+#attractionCard{
+    border:none !important;
+    width:100%;
+    max-height: 400px;
+    overflow:auto;
+
+}
+#flightsPrices{
+    width:100%;
+    max-height: 800px;
+    overflow:auto;
+}
+footer{
+    font-size: 12px;
+    margin-left:50px;
+    margin-right:50px;
+}
+.jarallax{
+    height:500px;
+}
+.logo{
+    text-align: center;
+}
+h1{
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+}
+h1::before,
+h1::after {
+    display: inline-block;
+    content: "";
+    border-top: .3rem solid black;
+    width: 4rem;
+    margin: 0 1rem;
+    transform: translateY(-1rem);
+}
+h3{
+    font-family: 'Bebas Neue', cursive; 
+}
+h5{
+    font-family: 'Bebas Neue', cursive; 
+}
+#guaranteeImg{
+    width:100%;
+    height:auto;
+}
+button{
+    border:none !important;
+}
+#trustLogo{
+    width:100%;
+    height:auto;
+}
+.parallax{
+    padding:20px;
+    background: url("images/guarantee2.png") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height:400px;
+}
+.parallax2{
+    padding:20px;
+    background: url("images/lastImage.png") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height:400px;
+}
+.footer-bs {
+    background-color: #3c3d41;
+    padding: 60px 40px;
+    width:100%;
+    color: rgba(255,255,255,1.00);
+    margin-left: 0;
+	border-bottom-right-radius: 6px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 6px;
+}
+.footer-bs .footer-brand, .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { padding:10px 25px; }
+.footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-color: transparent; }
+.footer-bs .footer-brand h2 { margin:0px 0px 10px; }
+.footer-bs .footer-brand p { font-size:12px; color:rgba(255,255,255,0.70); }
+
+.footer-bs .footer-nav ul.pages { list-style:none; padding:0px; }
+.footer-bs .footer-nav ul.pages li { padding:5px 0px;}
+.footer-bs .footer-nav ul.pages a { color:rgba(255,255,255,1.00); font-weight:bold; text-transform:uppercase; }
+.footer-bs .footer-nav ul.pages a:hover { color:rgba(255,255,255,0.80); text-decoration:none; }
+.footer-bs .footer-nav h4 {
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin-bottom:10px;
+}
+
+.footer-bs .footer-nav ul.list { list-style:none; padding:0px; }
+.footer-bs .footer-nav ul.list li { padding:5px 0px;}
+.footer-bs .footer-nav ul.list a { color:rgba(255,255,255,0.80); }
+.footer-bs .footer-nav ul.list a:hover { color:rgba(255,255,255,0.60); text-decoration:none; }
+
+.footer-bs .footer-social ul { list-style:none; padding:0px; }
+.footer-bs .footer-social h4 {
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+.footer-bs .footer-social li { padding:5px 4px;}
+.footer-bs .footer-social a { color:rgba(255,255,255,1.00);}
+.footer-bs .footer-social a:hover { color:rgba(255,255,255,0.80); text-decoration:none; }
+
+.footer-bs .footer-ns h4 {
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin-bottom:10px;
+}
+.footer-bs .footer-ns p { font-size:12px; color:rgba(255,255,255,0.70); }
+
+@media (min-width: 768px) {
+	.footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-left:solid 1px rgba(255,255,255,0.10); }
 }
 
