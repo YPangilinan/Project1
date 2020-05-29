@@ -164,7 +164,7 @@ button{
     }
 }
 
-@media (max-width: 640px){
+@media (min-width: 640px){
     .parallax{
         background-attachment: scroll;
     }
@@ -179,7 +179,7 @@ button{
     }
 }
 
-@media (max-width: 568px){
+@media (min-width: 568px){
     .parallax{
         background-attachment: scroll;
     }
@@ -194,7 +194,7 @@ button{
     }
 }
 
-@media (max-width:414px){
+@media (min-width:414px){
     .parallax{
         background-attachment: scroll;
     }
@@ -210,7 +210,7 @@ button{
 }
 
 
-@media (max-width:768px){
+@media (min-width:768px){
     .parallax{
         background-attachment: scroll;
     }
@@ -225,7 +225,7 @@ button{
     }
 }
 
-@media (max-width:320px){
+@media (min-width:320px){
     .parallax{
         background-attachment: scroll;
     }
