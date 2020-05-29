@@ -164,7 +164,7 @@ button{
     }
 }
 
-@media (max-width: 600px){
+@media (max-width: 640px){
     .parallax{
         background-attachment: scroll;
     }
@@ -174,7 +174,21 @@ button{
     .jarallax{
         width:100%;
     }
+    .navbar{
+        width:100%;
+    }
+}
 
+@media (max-width: 568px){
+    .parallax{
+        background-attachment: scroll;
+    }
+    .parallax2{
+        background-attachment: scroll;
+    }
+    .jarallax{
+        width:100%;
+    }
     .navbar{
         width:100%;
     }
