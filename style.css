@@ -174,4 +174,54 @@ button{
     .jarallax{
         width:100%;
     }
+
+    .navbar{
+        width:100%;
+    }
+}
+
+@media (max-width:414px){
+    .parallax{
+        background-attachment: scroll;
+    }
+    .parallax2{
+        background-attachment: scroll;
+    }
+    .jarallax{
+        width:100%;
+    }
+    .navbar{
+        width:100%;
+    }
+}
+
+
+@media (max-width:768px){
+    .parallax{
+        background-attachment: scroll;
+    }
+    .parallax2{
+        background-attachment: scroll;
+    }
+    .jarallax{
+        width:100%;
+    }
+    .navbar{
+        width:100%;
+    }
+}
+
+@media (max-width:320px){
+    .parallax{
+        background-attachment: scroll;
+    }
+    .parallax2{
+        background-attachment: scroll;
+    }
+    .jarallax{
+        width:100%;
+    }
+    .navbar{
+        width:100%;
+    }
 }
