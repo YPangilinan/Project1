@@ -162,8 +162,16 @@ button{
     .jarallax{
         width:100%;
     }
+    .parallax{
+        background-attachment: scroll;
+    }
+    .parallax2{
+        background-attachment: scroll;
+    }
+    .navbar{
+        width:100%;
+    }
 }
-
 @media (min-width: 640px){
     .parallax{
         background-attachment: scroll;
@@ -178,7 +186,6 @@ button{
         width:100%;
     }
 }
-
 @media (min-width: 568px){
     .parallax{
         background-attachment: scroll;
@@ -193,7 +200,6 @@ button{
         width:100%;
     }
 }
-
 @media (min-width:414px){
     .parallax{
         background-attachment: scroll;
@@ -208,23 +214,6 @@ button{
         width:100%;
     }
 }
-
-
-@media (min-width:768px){
-    .parallax{
-        background-attachment: scroll;
-    }
-    .parallax2{
-        background-attachment: scroll;
-    }
-    .jarallax{
-        width:100%;
-    }
-    .navbar{
-        width:100%;
-    }
-}
-
 @media (min-width:320px){
     .parallax{
         background-attachment: scroll;
